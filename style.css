@@ -1,0 +1,505 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Preto */
+    color: #fff; /* Texto branco */
+  }
+  
+  /* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000; /* Preto */
+  border-bottom: 2px solid #daa520; /* Dourado */
+  position: sticky;
+  top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 1000;
+}
+
+/* Logo */
+div.logo img {
+  width: 90px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Animação suave para transformação */
+}
+
+/* Efeito suave na logo ao passar o mouse */
+div.logo img:hover {
+  transform: scale(1.05); /* Aumenta levemente o tamanho */
+  filter: brightness(1.2); /* Leve aumento de brilho */
+}
+
+/* Links do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #daa520; /* Dourado */
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #fff; /* Branco no hover */
+}
+
+/* Estilos do Burger Menu (para dispositivos móveis) */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  background-color: #daa520; /* Dourado */
+  width: 25px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Oculta links na versão móvel */
+  }
+  
+  .burger {
+    display: flex; /* Exibe o menu de hambúrguer em dispositivos móveis */
+  }
+}
+
+  
+  /* Menu responsivo */
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background-color: #daa520; /* Dourado */
+    transition: all 0.3s ease;
+  }
+
+    /* Container do banner */
+    .banner-inicial {
+      position: relative;
+      width: 100%;
+      height: 600px; /* Tamanho fixo do container */
+    }
+
+    /* Estiliza a imagem com tamanho fixo */
+    .banner-inicial img {
+      width: 100%;
+      height: 600px; /* Tamanho fixo */
+      object-fit: cover;
+      position: absolute; /* Mantém a imagem no fundo */
+      z-index: 1;
+    }
+
+    /* Texto sobre a imagem */
+    .banner-inicial .texto {
+      position: absolute; /* Sobrepõe a imagem */
+      top: 50%; /* Centraliza verticalmente */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translate(-50%, -50%); /* Ajusta o ponto de referência */
+      font-size: 24px; /* Tamanho fixo do texto */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para destacar o texto */
+      text-align: center;
+      /*transition: font-family 0.5s ease, color 0.5s ease;*/
+    }
+
+    /* Texto sobre a imagem */
+    .banner-inicial .texto {
+      position: relative; /* Para estar acima da imagem */
+      z-index: 2;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona sombra para destacar */
+    }
+
+/* Estilização inicial do ícone */
+div.whatsappicon img {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 20px; /* Distância do canto inferior */
+  right: 20px; /* Distância do canto direito */
+  z-index: 1000; /* Fica acima de outros elementos */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transformação */
+}
+
+/* Animação no hover (passar o mouse) */
+div.whatsappicon img:hover {
+  transform: scale(1.2) rotate(10deg); /* Aumenta e gira */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Efeito de transição ao voltar ao estado normal */
+div.whatsappicon img:active {
+  transform: scale(1.1); /* Reduz levemente ao clicar */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra reduzida */
+}
+
+
+  
+/* Estilização geral da seção "Sobre nós" */
+.sobre-nos-container {
+  background: #f7fafc; /* Fundo claro */
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Para garantir que ocupe toda a altura da tela */
+}
+
+/* Conteúdo da seção */
+.conteudo-sobre-nos {
+  max-width: 900px;
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.conteudo-sobre-nos:hover {
+  transform: translateY(-10px); /* Efeito de elevação */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Aumento da sombra ao passar o mouse */
+}
+
+/* Título */
+.conteudo-sobre-nos h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #daa520; /* Cor escura para contraste */
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Letras maiúsculas */
+  letter-spacing: 2px;
+}
+
+/* Parágrafos */
+.conteudo-sobre-nos p {
+  font-size: 1.1rem;
+  color: #daa520;
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0;
+  transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no texto */
+.conteudo-sobre-nos p:hover {
+  color: #000000; /* Mudança para azul moderno ao passar o mouse */
+}
+
+/* Texto de missão */
+.conteudo-sobre-nos .missao {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #daa520;
+  padding: 0 10%;
+  margin-top: 40px;
+}
+
+/* Estilos da seção */
+.contribua-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), #f3f4f6);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+
+  /* Estilo inicial para a animação */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+
+  /* Novo fundo decorativo */
+  background-image: radial-gradient(circle at bottom right, #daa520 0%, rgba(255, 255, 255, 0) 60%);
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  background-position: bottom right;
+
+  /* Configuração para o efeito 3D */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribua-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contribua-section:hover {
+  transform: rotateX(10deg) rotateY(-10deg);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+.contribua-section h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contribua-section p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.qrcode-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode {
+  width: 200px;
+  height: 200px;
+}
+
+/* Remove qualquer padding ou margem */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+.endereco-section {
+  width: 100%;
+  height: 70vh; /* O mapa ocupará toda a altura da janela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Cor de fundo para carregamento */
+}
+
+.mapa-container {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 99%;
+  border: none;
+}
+
+/* Estilos do Footer */
+footer.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  width: 45%;
+  padding: 10px;
+}
+
+.footer-left h3, .footer-right h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de hover nos ícones sociais */
+.social-icon:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Footer bottom: Criado por e logo */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.footer-bottom p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.created-by-logo {
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.created-logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Animação para o logo no "Criado por" */
+.created-by-logo:hover .created-logo {
+  transform: scale(1.1); /* Aumenta o logo ao passar o mouse */
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left, .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para o botão "Voltar ao Topo" */
+.back-to-top {
+  position: fixed;
+  bottom: 30px; /* Distância do fundo */
+  left: 30px;   /* Distância da esquerda */
+  background-color: #fff; /* Fundo branco */
+  border-radius: 50%; /* Botão circular */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 15px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.back-to-top i {
+  font-size: 24px; /* Tamanho da seta */
+  color: #333; /* Cor da seta */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.back-to-top:hover {
+  background-color: #daa520; /* Cor suave quando passar o mouse */
+  transform: scale(1.1); /* Aumenta o botão */
+}
+
+.back-to-top:hover i {
+  transform: translateY(-3px); /* Animação da seta para cima */
+}
+
+/* Esconde o botão quando no topo da página */
+.back-to-top.hidden {
+  opacity: 0;
+  pointer-events: none; /* Desabilita a interação */
+}
+
+/* Animação suave ao rolar até o topo */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização para dispositivos móveis */
+@media (max-width: 768px) {
+  .conteudo-sobre-nos {
+      padding: 30px;
+  }
+
+  .conteudo-sobre-nos h2 {
+      font-size: 2rem;
+  }
+
+  .conteudo-sobre-nos p {
+      font-size: 1rem;
+      padding: 0 10px;
+  }
+
+  .conteudo-sobre-nos .missao {
+      font-size: 1.1rem;
+  }
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .conteudo-sobre-nos p {
+      padding: 0 5%;
+  }
+}
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #000;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  }
