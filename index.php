@@ -107,13 +107,7 @@ Com cultos semanais, nossas portas estão abertas para todos que desejam experim
 <a href="#" class="back-to-top">
   <i class="fa fa-chevron-up"></i>  <!-- Ícone da seta para cima -->
 </a>
-
-
-
-
-
-
-
+        
 <div class='whatsappicon'>
       <a href="https://w.app/igrejapaideamor" target="_blank">  <!--Link que será puxado-->
       <img src='image/WhatsappLogo.png'>  <!--Icone-->
